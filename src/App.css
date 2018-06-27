@@ -1,3 +1,5 @@
+/* Default React Styles */
+
 .App {
   text-align: center;
 }
@@ -25,4 +27,70 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Sectional Styles */
+html, body {
+  height: 100%;
+}
+
+div.wrapper {
+  min-height: 100%;
+}
+
+div#main {
+  overflow: auto;
+  padding-bottom: 50px;
+}
+
+/* Background Styles */
+div.bg {
+  background-image: url("./pages/images/newspaper.jpg");
+  height: 20vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Article Display Styles */
+
+.header {
+  text-align: center;
+}
+
+.card-body div div.row {
+  display: block;
+  margin: 30px auto;
+}
+
+.card-body div button {
+  float: right;
+}
+
+div.section {
+  margin: 30px auto;
+}
+
+div.article {
+  margin: 20px auto;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Footer Styles */
+footer {
+  position: relative;
+  margin-top: -50px;
+  height: 50px;
+  clear: both;
+  padding-top: 20px;
+  color: #fff;
+  background-color: #343a40;
+  padding-left: 30px;
 }

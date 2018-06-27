@@ -22,6 +22,11 @@ div.bg {
 }
 
 /* Article Display Styles */
+
+.header {
+    text-align: center;
+}
+
 .card-body div div.row {
     display: block;
     margin: 30px auto;
@@ -55,4 +60,6 @@ footer {
     clear: both;
     padding-top: 20px;
     color: #fff;
+    background-color: #343a40;
+    padding-left: 30px;
 }
