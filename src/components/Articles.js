@@ -45,11 +45,15 @@ export default class Articles extends React.Component {
                 <React.Fragment>
                     {/* Show only if results */}
                     {this.props.results.articles.length > 0 ? (
-                    <div className="card article">
+                    <div className="card article" key={this.articleId}>
                         <a href={article.url} target="rel=noopener">
                         <div className="card-body">
                             <img 
-                                src={article.image.url}
+                                src={
+                                    `${article.image ? 
+                                        "https://static01.nyt.com/" + article.image.url :
+                                        "http://www.clker.com/cliparts/B/u/S/l/W/l/no-photo-available-th.png"}`
+                                    }
                                 className="img-thumbnail float-right" 
                                 alt={article.headline} />
                             <h5 className="card-title">{article.headline}</h5>

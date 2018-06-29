@@ -27,13 +27,12 @@ class Home extends React.Component {
 
         this.setState({limit});
         const queryString = `${topic}${startDate}${endDate}`;
-        // console.log('queryString: ', queryString);
         this.search(queryString);
     }
 
     search = queryString => {
 
-
+        // console.log('queryString: ', queryString);
         API.search(queryString).then(res => {
 
             let articlesArray = [];
@@ -52,8 +51,7 @@ class Home extends React.Component {
                     image: multimedia[2]});
             });
 
-            console.log('articlesArray: ', articlesArray);
-            console.log('this.state(before): ', this.state);
+            // console.log('articlesArray: ', articlesArray);
 
             this.setState(prevState => ({
                 articles: [...prevState].concat(articlesArray).splice(0, this.state.limit)

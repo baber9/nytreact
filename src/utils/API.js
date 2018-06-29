@@ -1,14 +1,15 @@
 import axios from 'axios';
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Build Query String
 const queryString = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=';
-const API_KEY = process.env.REACT_APP_NY_TIMES_API_KEY;
+const API_KEY = process.env.REACT_APP_NY_TIMES_API_KEY + '&q=';
 
 export default {
     
     search: searchQuery => {
-        return axios.get(`${queryString}${API_KEY}&q=${searchQuery}`);
+        return axios.get(`${queryString}${API_KEY}${searchQuery}`);
     },
 
     saveArticle: articleObject => {

@@ -24,11 +24,6 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 /* Sectional Styles */
 html, body {
   height: 100%;
@@ -52,6 +47,28 @@ div.bg {
   background-size: cover;
 }
 
+/* Form Styles */
+button#clear {
+  margin-right: 20px;
+}
+
+button#submit {
+  margin-right: 3px;
+}
+
+.card-body div button {
+  float: right;
+}
+
+select#numOfRecs {
+  padding: .375rem .60rem;
+}
+
+.form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /* Article Display Styles */
 
 .header {
@@ -63,16 +80,16 @@ div.bg {
   margin: 30px auto;
 }
 
-.card-body div button {
-  float: right;
-}
-
 div.section {
   margin: 30px auto;
 }
 
 div.article {
   margin: 20px auto;
+}
+
+.card-body img {
+  width: 85px;
 }
 
 a {
@@ -93,4 +110,9 @@ footer {
   color: #fff;
   background-color: #343a40;
   padding-left: 30px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
