@@ -89,7 +89,8 @@ div.article {
 }
 
 .card-body img {
-  width: 85px;
+  width: 100px;
+  margin-left: 20px;
 }
 
 a {

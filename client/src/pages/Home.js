@@ -48,7 +48,8 @@ class Home extends React.Component {
                     url: web_url, 
                     date: pub_date, 
                     articleId: _id, 
-                    image: multimedia[2]});
+                    image: multimedia[2]})
+                    return null;
             });
 
             // console.log('articlesArray: ', articlesArray);
