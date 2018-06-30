@@ -17,7 +17,14 @@ const ArticleSchema = new Schema({
         type: String,
         required: false
     },
-    date: String
+    date: {
+        type: Date,
+        default: Date.now
+    },
+    articleId: {
+        type: String,
+        require: true
+    }
 });
 
 // use mongoose model method to create model

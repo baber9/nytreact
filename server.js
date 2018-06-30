@@ -1,8 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-cont routes = require('./routes');
-const logger = require('morgan');
+const routes = require('./routes');
 
 let db = require('./models');
 
@@ -12,14 +11,16 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('client/build'));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json'}));
 
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-    process.env.MONGODB_URI
+    'mongodb://localhost/nytreact', {
+        useMongoClient: true
+    }
+    // process.env.MONGODB_URI
 );
 
 mongoose.connection.on('error', console.error.bind(console, 'connection error:'));

@@ -1,7 +1,6 @@
 
 // Import React & ReactDOM
 import React from 'react';
-// import ReactDOM from 'react-dom';
 
 // Import React Router
 import { BrowserRouter, Route  } from 'react-router-dom';
@@ -11,7 +10,7 @@ import { BrowserRouter, Route  } from 'react-router-dom';
 
 // Import Pages
 import Home from  './pages/Home';
-// import Saved from './pages/Saved';
+import Saved from './pages/Saved';
 
 // Import CSS
 import './App.css';
@@ -21,8 +20,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <BrowserRouter>
+          <switch>
           <Route exact path='/' component={Home} />
-          {/* <Router exact path='/Saved' component={Saved} /> */}
+          <Route exact path='/saved' component={Saved} />
+          </switch>
         </BrowserRouter>
       </React.Fragment>
     );

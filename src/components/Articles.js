@@ -4,10 +4,6 @@ import Article from './Article';
 
 
 export default class Articles extends React.Component {
-    constructor(props) {
-        super(props);
-
-    };
 
     render() {
 
